@@ -4,23 +4,40 @@ console.log("JS is loaded");
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
-let playerChoice = new Component(x, y, w, h, color, ctx); //change the location on screen define color
+let playerChoice = new Component(
+  canvas.width / 2 - 50,
+  canvas.height / 2,
+  50,
+  50,
+  ctx
+);
+let generatedEnemy = new Component(
+  canvas.width / 2 + 50,
+  canvas.height / 2,
+  50,
+  50,
+  ctx
+);
 
 window.onload = () => {
-  document.getElementById("start-button").onclick = () => {
-    startGame();
+  document.getElementsByClassName("start-button")[0].onclick = () => {
+    let game = new Game(ctx, canvas.width, canvas.height, playerChoice);
+    game.createBackground();
   };
 
-  function startGame() {
-    const game = new Game(ctx, canvas.width, canvas.height, playerChoice);
-    game.start();
-  }
-
-  let startButton = document.getElementById("start");
-
-  startButton.onclick = function () {
-    console.log("Starting");
-    let game = new Game(ctx, canvas.width, canvas.height, player);
-    game.start();
+  document.getElementsByClassName("rock").onclick = () => {
+    userChoice(playerChoice);
+  };
+  document.getElementsByClassName("paper").onclick = () => {
+    userChoice(playerChoice);
+  };
+  document.getElementsByClassName("scissors").onclick = () => {
+    userChoice(playerChoice);
+  };
+  document.getElementsByClassName("lizard").onclick = () => {
+    userChoice(playerChoice);
+  };
+  document.getElementsByClassName("spock").onclick = () => {
+    userChoice(playerChoice);
   };
 };
