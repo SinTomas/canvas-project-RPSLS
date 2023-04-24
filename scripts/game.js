@@ -27,7 +27,7 @@ class Game {
     //ctx.fillText(Score ${this.score}, 80, 30) lives( after)
   }
 
-  results(generatedChoice) {
+  results() {
     if (playerChoice === generatedChoice) {
       return "The result is a tie!";
     } else if (playerChoice === "rock") {
