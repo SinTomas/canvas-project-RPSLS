@@ -13,18 +13,18 @@ class Game {
     this.lives = 2;
   }
 
-  createBackground (){
+  createBackground() {
     let img = new Image();
-        img.addEventListener('load', ()=>{
-            this.img = img;
-        });
+    img.addEventListener("load", () => {
+      this.img = img;
+    });
 
-        img.src= "../images/truck.jpg";
-        this.ctx.drawImage(img, 0, 0, this.width, this.height);
+    img.src = "../images/truck.jpg";
+    this.ctx.drawImage(img, 0, 0, this.width, this.height);
 
-        //ctx.fillStyle = 'white';
-        //ctx.font = '30px Helvetica';
-        //ctx.fillText(Score ${this.score}, 80, 30) lives( after)
+    //ctx.fillStyle = 'white';
+    //ctx.font = '30px Helvetica';
+    //ctx.fillText(Score ${this.score}, 80, 30) lives( after)
   }
 
   results(generatedChoice) {
@@ -90,21 +90,20 @@ document.addEventListener("keydown", (generatedChoice) => {
 
   switch (generatedChoice) {
     case 0:
-        generatedChoice = "rock";
+      generatedChoice = "rock";
       break;
     case 1:
-        generatedChoice = "paper";
+      generatedChoice = "paper";
       break;
     case 2:
-        generatedChoice= "scissors";
+      generatedChoice = "scissors";
       break;
     case 3:
-        generatedChoice= "lizard";
+      generatedChoice = "lizard";
       break;
     case 4:
-        generatedChoice= "spock";
+      generatedChoice = "spock";
       break;
   }
 });
 // this is not working let result = compare(generatedChoice);
-

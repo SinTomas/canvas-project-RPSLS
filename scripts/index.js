@@ -22,7 +22,7 @@ let generatedEnemy = new Component(
 window.onload = () => {
   document.getElementsByClassName("start-button")[0].onclick = () => {
     let game = new Game(ctx, canvas.width, canvas.height, playerChoice);
-   game.createBackground();
+    game.createBackground();
   };
 
   document.getElementsByClassName("rock").onclick = () => {
