@@ -13,6 +13,20 @@ class Game {
     this.lives = 2;
   }
 
+  createBackground (){
+    let img = new Image();
+        img.addEventListener('load', ()=>{
+            this.img = img;
+        });
+
+        img.src= "../images/truck.jpg";
+        this.ctx.drawImage(img, 0, 0, this.width, this.height);
+
+        //ctx.fillStyle = 'white';
+        //ctx.font = '30px Helvetica';
+        //ctx.fillText(Score ${this.score}, 80, 30) lives( after)
+  }
+
   results(generatedChoice) {
     if (playerChoice === generatedChoice) {
       return "The result is a tie!";
@@ -70,27 +84,27 @@ class Game {
   }
 }
 
-document.addEventListener("keydown", (computerChoice) => {
-  userChoice = this.id;
-  computerChoice = Math.floor(Math.random() * 5);
+document.addEventListener("keydown", (generatedChoice) => {
+  playerChoice = this.id;
+  generatedChoice = Math.floor(Math.random() * 5);
 
-  switch (computerChoice) {
+  switch (generatedChoice) {
     case 0:
-      computerChoice = "rock";
+        generatedChoice = "rock";
       break;
     case 1:
-      computerChoice = "paper";
+        generatedChoice = "paper";
       break;
     case 2:
-      computerChoice = "scissors";
+        generatedChoice= "scissors";
       break;
     case 3:
-      computerChoice = "lizard";
+        generatedChoice= "lizard";
       break;
     case 4:
-      computerChoice = "spock";
+        generatedChoice= "spock";
       break;
   }
 });
-// this is not working let result = compare(computerChoice);
+// this is not working let result = compare(generatedChoice);
 
