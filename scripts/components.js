@@ -5,7 +5,7 @@ class Component {
     this.w = w;
     this.h = h;
 
-    this.color = "red";
+    this.color = "purple";
     this.ctx = ctx;
   }
 
@@ -14,23 +14,28 @@ class Component {
     this.ctx.fillRect(this.x, this.y, this.w, this.h);
   }
 
-  userChoice(playerChoice) {
-    switch (playerChoice) {
-      case document.getElementsByClassName("rock"):
+  choice(choice) {
+    switch (choice) {
+      case "rock":
         this.color = "red";
         console.log("rock is red uh-uh");
+        this.draw();
         break;
-      case document.getElementsByClassName("paper"):
+      case "paper":
         this.color = "blue";
+        this.draw();
         break;
-      case document.getElementsByClassName("scissors"):
+      case "scissors":
         this.color = "green";
+        this.draw();
         break;
-      case document.getElementsByClassName("lizard"):
+      case "lizard":
         this.color = "yellow";
+        this.draw();
         break;
-      case document.getElementsByClassName("spock"):
+      case "spock":
         this.color = "orange";
+        this.draw();
         break;
     }
     return;

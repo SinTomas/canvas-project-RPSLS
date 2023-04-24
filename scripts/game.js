@@ -85,8 +85,7 @@ class Game {
 }
 
 document.addEventListener("keydown", (generatedChoice) => {
-  playerChoice = this.id;
-  generatedChoice = Math.floor(Math.random() * 5);
+  let generatedChoice = Math.floor(Math.random() * 5);
 
   switch (generatedChoice) {
     case 0:

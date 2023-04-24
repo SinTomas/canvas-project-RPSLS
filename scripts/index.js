@@ -25,19 +25,25 @@ window.onload = () => {
     game.createBackground();
   };
 
-  document.getElementsByClassName("rock").onclick = () => {
-    userChoice(playerChoice);
+  document.getElementsByClassName("rock")[0].onclick = () => {
+    //debugger; // ativa, chega aqui
+    playerChoice.choice("rock");
+    generatedEnemy.choice(generatedChoice);
   };
-  document.getElementsByClassName("paper").onclick = () => {
-    userChoice(playerChoice);
+  document.getElementsByClassName("paper")[0].onclick = () => {
+    playerChoice.choice("paper");
+    generatedEnemy.choice(generatedChoice);
   };
-  document.getElementsByClassName("scissors").onclick = () => {
-    userChoice(playerChoice);
+  document.getElementsByClassName("scissors")[0].onclick = () => {
+    playerChoice.choice("scissors");
+    generatedEnemy.choice(generatedChoice);
   };
-  document.getElementsByClassName("lizard").onclick = () => {
-    userChoice(playerChoice);
+  document.getElementsByClassName("lizard")[0].onclick = () => {
+    playerChoice.choice("lizard");
+    generatedEnemy.choice(generatedChoice);
   };
-  document.getElementsByClassName("spock").onclick = () => {
-    userChoice(playerChoice);
+  document.getElementsByClassName("spock")[0].onclick = () => {
+    playerChoice.choice("spock");
+    generatedEnemy.choice(generatedChoice);
   };
 };
