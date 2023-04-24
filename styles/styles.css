@@ -25,7 +25,7 @@ canvas {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1100px;
+  width: 1050px;
 }
 
 .start-button{
@@ -37,31 +37,38 @@ canvas {
     display: flex;
     flex-direction: column;
     font-weight: 900;
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.5), 0 6px 12px 0 rgba(0,0,0,0.2);
+    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+    .start-button:hover{
+    transform: translateY(3px);
+    box-shadow: inset 0px 16px 28px 4px rgba(0, 0, 0, 0.3);
+    background-color: rgb(212, 33, 33);
 }
 
 .options-div{
     width: 700px;
+    height: 130px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
 }
 
-.option-button{
+.options-div > button{
     align-items: center;
-    padding: 3% 6%;
+    width:100px;
+    height: 100px;
     border-style: 2px solid darkred;
     background-color: firebrick;
     color: white;
     border-radius: 50%;
-    display: flex;
     font-weight: 900;
     margin: 1%;
     box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.option-button:hover{
+.options-div > button:hover{
     transform: translateY(3px);
     box-shadow: inset 0px 12px 24px 3px rgba(0, 0, 0, 0.25);
 }
