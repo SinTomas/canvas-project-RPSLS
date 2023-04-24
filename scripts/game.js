@@ -19,7 +19,7 @@ class Game {
       this.img = img;
     });
 
-    img.src = "../images/truck.jpg";
+    img.src = "./images/retro-gif.gif";
     this.ctx.drawImage(img, 0, 0, this.width, this.height);
 
     //ctx.fillStyle = 'white';
@@ -27,82 +27,113 @@ class Game {
     //ctx.fillText(Score ${this.score}, 80, 30) lives( after)
   }
 
-  results() {
+  results(playerChoice, generatedChoice) {
     if (playerChoice === generatedChoice) {
-      return "The result is a tie!";
+      let result = document.getElementById("round-result");
+      result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. The result is a tie!`;
     } else if (playerChoice === "rock") {
       if (generatedChoice === "paper") {
-        return "paper covers rock";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Paper covers rock, you lose!`;
+        player.lives--;
       } else if (generatedChoice === "scissors") {
-        return "rock crushes scissors";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Rock crushes scissors, you win!`;
+        npc.lives--;
       } else if (generatedChoice === "lizard") {
-        return "rock crushes lizard";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Rock crushes lizard, you win!`;
+        npc.lives--;
       } else {
-        return "spock vaporizes rock";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Spock vaporizes rock, you lose!`;
+        player.lives--;
       }
     } else if (playerChoice === "paper") {
+      console.log("paper");
       if (generatedChoice === "rock") {
-        return "paper covers rock";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Paper covers rock, you win!`;
+        npc.lives--;
       } else if (generatedChoice === "scissors") {
-        return "scissors cut paper";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Scissors cut paper, you lose!`;
+        player.lives--;
       } else if (generatedChoice === "lizard") {
-        return "lizard eats paper";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Lizard eats paper, you lose!`;
+        player.lives--;
       } else {
-        return "paper disproves spock";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Paper disproves spock, you win!`;
+        npc.lives--;
       }
     } else if (playerChoice === "scissors") {
       if (generatedChoice === "rock") {
-        return "rock crushes scissors";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Rock crushes scissors, you lose!`;
+        player.lives--;
       } else if (generatedChoice === "paper") {
-        return "scissors cut paper";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Scissors cut paper, you win!`;
+        npc.lives--;
       } else if (generatedChoice === "lizard") {
-        return "scissors decapitate lizard";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Scissors decapitate lizard, you win!`;
+        npc.lives--;
       } else {
-        return "spock smashes scissors";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Spock smashes scissors, you lose!`;
+        player.lives--;
       }
     } else if (playerChoice === "lizard") {
       if (generatedChoice === "rock") {
-        return "rock crushes lizard ";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Rock crushes lizard, you lose!`;
+        player.lives--;
       } else if (generatedChoice === "paper") {
-        return "lizard eats paper";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Lizard eats paper, you win!`;
+        npc.lives--;
       } else if (generatedChoice === "scissors") {
-        return "scissors decapitate lizard";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Scissors decapitate lizard, you lose!`;
+        player.lives--;
       } else {
-        return "lizard poisons spock";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Lizard poisons spock, you win!`;
+        npc.lives--;
       }
     } else if (playerChoice === "spock") {
       if (generatedChoice === "rock") {
-        return "spock vaporizes rock";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Spock vaporizes rock, you win!`;
+        npc.lives--;
       } else if (generatedChoice === "paper") {
-        return "paper disproves spock ";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Paper disproves spock, you lose!`;
+        player.lives--;
       } else if (generatedChoice === "scissors") {
-        return "spock smashes scissors";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Spock smashes scissors, you win!`;
+        npc.lives--;
       } else {
-        return "lizard poisons spock";
+        let result = document.getElementById("round-result");
+        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Lizard poisons spock, you lose!`;
+        player.lives--;
       }
     }
   }
-}
 
-document.addEventListener("keydown", (generatedChoice) => {
-  let generatedChoice = Math.floor(Math.random() * 5);
+  checkFinishedRound() {}
 
-  switch (generatedChoice) {
-    case 0:
-      generatedChoice = "rock";
-      break;
-    case 1:
-      generatedChoice = "paper";
-      break;
-    case 2:
-      generatedChoice = "scissors";
-      break;
-    case 3:
-      generatedChoice = "lizard";
-      break;
-    case 4:
-      generatedChoice = "spock";
-      break;
+  checkGameOver() {
+    if (player.lives === 0) {
+      let matchResult = document.getElementById("match-result");
+      matchResult.innerHTML = "You lost! Better luck next time!";
+    } else if (npc.lives === 0) {
+      let matchResult = document.getElementById("match-result");
+      matchResult.innerHTML = "Congratulations! You win!";
+    }
   }
-});
-// this is not working let result = compare(generatedChoice);
+}

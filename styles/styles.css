@@ -4,21 +4,19 @@
 }
 
 body {
-    background-image: url("../images/image.jpg");
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-    
+  background-image: url("../images/image.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 canvas {
-    margin-top: 8%;
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    margin-bottom: 30px;
-    background-color: rgb(24, 28, 29);
+  margin-top: 8%;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background-color: rgb(24, 28, 29);
 }
 
 #buttons {
@@ -28,47 +26,47 @@ canvas {
   width: 1050px;
 }
 
-.start-button{
-    padding: 40% 80%;
-    border-style: 2px solid darkred;
-    background-color: firebrick;
-    color: white;
-    border-radius: 1px;
-    display: flex;
-    flex-direction: column;
-    font-weight: 900;
-    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+.start-button {
+  padding: 40% 80%;
+  border-style: 2px solid darkred;
+  background-color: firebrick;
+  color: white;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-    .start-button:hover{
-    transform: translateY(3px);
-    box-shadow: inset 0px 16px 28px 4px rgba(0, 0, 0, 0.3);
-    background-color: rgb(212, 33, 33);
+.start-button:hover {
+  transform: translateY(3px);
+  box-shadow: inset 0px 16px 28px 4px rgba(0, 0, 0, 0.3);
+  background-color: rgb(212, 33, 33);
 }
 
-.options-div{
-    width: 700px;
-    height: 130px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+.options-div {
+  width: 700px;
+  height: 130px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
-.options-div > button{
-    align-items: center;
-    width:100px;
-    height: 100px;
-    border-style: 2px solid darkred;
-    background-color: firebrick;
-    color: white;
-    border-radius: 50%;
-    font-weight: 900;
-    margin: 1%;
-    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+.options-div > button {
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-style: 2px solid darkred;
+  background-color: firebrick;
+  color: white;
+  border-radius: 50%;
+  font-weight: 900;
+  margin: 1%;
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.options-div > button:hover{
-    transform: translateY(3px);
-    box-shadow: inset 0px 12px 24px 3px rgba(0, 0, 0, 0.25);
+.options-div > button:hover {
+  transform: translateY(3px);
+  box-shadow: inset 0px 12px 24px 3px rgba(0, 0, 0, 0.25);
 }
