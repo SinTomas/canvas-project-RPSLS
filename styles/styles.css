@@ -9,11 +9,12 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-top: 8%;
+
     
 }
 
 canvas {
+    margin-top: 8%;
     border: 3px solid rgb(0, 0, 0);
     border-radius: 10px;
     margin-bottom: 30px;
@@ -32,13 +33,15 @@ canvas {
     border-style: 2px solid darkred;
     background-color: firebrick;
     color: white;
-    border-radius: 5px;
+    border-radius: 1px;
     display: flex;
     flex-direction: column;
     font-weight: 900;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.5), 0 6px 12px 0 rgba(0,0,0,0.2);
 }
 
 .options-div{
+    width: 700px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -47,12 +50,18 @@ canvas {
 
 .option-button{
     align-items: center;
-    padding: 0% 2%;
+    padding: 3% 6%;
     border-style: 2px solid darkred;
     background-color: firebrick;
     color: white;
-    border-radius: 5px;
+    border-radius: 50%;
     display: flex;
     font-weight: 900;
     margin: 1%;
+    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.option-button:hover{
+    transform: translateY(3px);
+    box-shadow: inset 0px 12px 24px 3px rgba(0, 0, 0, 0.25);
 }
