@@ -7,7 +7,7 @@ let ctx = canvas.getContext("2d");
 let playerChoice = new Component(x, y, w, h, color, ctx); //change the location on screen define color
 
 window.onload = () => {
-  document.getElementById("start-button").onclick = () => {
+  document.getElementsByClassName("start-button").onclick = () => {
     startGame();
   };
 
@@ -16,11 +16,25 @@ window.onload = () => {
     game.start();
   }
 
-  let startButton = document.getElementById("start");
-
-  startButton.onclick = function () {
-    console.log("Starting");
-    let game = new Game(ctx, canvas.width, canvas.height, player);
-    game.start();
-  };
+  function userChoice(playerChoice) {
+    switch (playerChoice) {
+      case document.getElementsByClassName('rock'):
+        playerChoice.color = "red";
+        break;
+      case document.getElementsByClassName('paper'):
+        playerChoice.color = "blue";
+        break;
+      case document.getElementsByClassName('scissors'):
+        playerChoice.color = "green";
+        break;
+      case document.getElementsByClassName('lizard'):
+        playerChoice.color = "yellow";
+        break;
+      case document.getElementsByClassName('spock'):
+        playerChoice.color = "orange";
+        break;
+    }
+    return;
+  }
+  userChoice();
 };
