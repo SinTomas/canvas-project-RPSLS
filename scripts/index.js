@@ -25,7 +25,9 @@ let npc = new Component(
 
 window.onload = () => {
   document.getElementsByClassName("start-button")[0].onclick = () => {
-    let game = new Game(ctx, canvas.width, canvas.height, player);
+    //flag = null enables the choice buttons
+    let flag = null;
+    let game = new Game(ctx, canvas.width, canvas.height, flag, player);
     game.clear();
     game.createBackground();
     //game.start();
