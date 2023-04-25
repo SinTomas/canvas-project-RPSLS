@@ -17,7 +17,7 @@ class Game {
       this.img = img;
     });
 
-    img.src = "./images/retro-gif.gif";
+    img.src = "./images/tbbt-wp2.jpg";
     this.ctx.drawImage(img, 0, 0, this.width, this.height);
 
     //ctx.fillStyle = 'white';
@@ -178,7 +178,7 @@ class Game {
       this.stop();
       this.clear()
       player.lives = 2
-      }, 3000);
+      }, 5000);
       
     } else if (npc.lives === 0) {
       console.log("npc lost");
