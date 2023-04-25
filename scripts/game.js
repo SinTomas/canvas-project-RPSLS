@@ -8,6 +8,7 @@ class Game {
     this.width = width;
     this.height = height;
     this.playerChoice = playerChoice;
+    this.intervalId = null;
 
     // Lives
     this.lives = 2;
@@ -125,15 +126,31 @@ class Game {
     }
   }
 
-  checkFinishedRound() {}
-
-  checkGameOver() {
+  winOrLose() {
     if (player.lives === 0) {
-      let matchResult = document.getElementById("match-result");
-      matchResult.innerHTML = "You lost! Better luck next time!";
+      console.log("player lost");
+      ctx.fillStyle = "white";
+      ctx.fillRect(canvas.width / 2, canvas.height / 2, 400, 250);
+      ctx.font = "16px sans-serif";
+      ctx.fillStyle = "black";
+      ctx.fillText("Bazinga! Better luck next time!", 400, 250);
+      this.stop();
     } else if (npc.lives === 0) {
-      let matchResult = document.getElementById("match-result");
-      matchResult.innerHTML = "Congratulations! You win!";
+      console.log("npc lost");
+      ctx.fillStyle = "white";
+      ctx.fillRect(canvas.width / 2, canvas.height / 2, 400, 250);
+      ctx.font = "16px sans-serif";
+      ctx.fillStyle = "black";
+      ctx.fillText("Congratulations! You win!", 400, 250);
+      this.stop();
+    }
+  }
+
+  checkFinishedRound() {} //FALTA FAZER
+
+  stop() {
+    if (player.lives === 0 || npc.lives === 0) {
+      clearInterval(this.intervalId);
     }
   }
 }

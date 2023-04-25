@@ -54,6 +54,8 @@ window.onload = () => {
       npc.choice(generatedChoice);
       game.results(player.option, npc.option);
     };
-    checkGameOver();
+    setInterval(() => {
+      game.winOrLose();
+    }, 1000);
   };
 };

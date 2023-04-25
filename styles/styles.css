@@ -1,3 +1,9 @@
+@font-face {
+    font-family: sans-serif;
+    src: url(../fonts/retroGame.TTF);
+}
+    
+    
 * {
   margin: 0;
   padding: 0;
