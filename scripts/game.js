@@ -68,207 +68,271 @@ class Game {
       }
     };
   }
+
   //Function that explains the win-lose logic of the game and
   //delivers a message for each round
+
   results(playerChoice, generatedChoice) {
     if (playerChoice === generatedChoice) {
+      //ctx.fillStyle = "white";
+      //ctx.fillRect(canvas.width / 2, 400, 1000, 250);
+      ctx.font = "30px sans-serif";
       ctx.fillStyle = "white";
-      ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-      ctx.font = "20px sans-serif";
-      ctx.fillStyle = "black";
-      ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-      ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-      ctx.fillText(`The result is a tie!`, 475, 360);
+      ctx.fillText(
+        `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+        300,
+        500
+      );
+      ctx.fillText(`The result is a tie!`, 300, 550);
     } else if (playerChoice === "rock") {
       if (generatedChoice === "paper") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2, 400, 1000, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Paper covers rock, you lose!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Paper covers rock, you lose!`, 300, 550);
         player.lives--;
       } else if (generatedChoice === "scissors") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Rock crushes scissors, you win!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Rock crushes scissors, you win!`, 300, 550);
         player.lives--;
         npc.lives--;
       } else if (generatedChoice === "lizard") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Rock crushes lizard, you win!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Rock crushes lizard, you win!`, 300, 550);
         npc.lives--;
       } else {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Spock vaporizes rock, you lose!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Spock vaporizes rock, you lose!`, 300, 550);
         player.lives--;
       }
     } else if (playerChoice === "paper") {
       if (generatedChoice === "rock") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Paper covers rock, you win!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Paper covers rock, you win!`, 300, 550);
         npc.lives--;
       } else if (generatedChoice === "scissors") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Scissors cut paper, you lose!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Scissors cut paper, you lose!`, 300, 550);
         player.lives--;
       } else if (generatedChoice === "lizard") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Lizard eats paper, you lose!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Lizard eats paper, you lose!`, 300, 550);
         player.lives--;
       } else {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Paper disproves spock, you win!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Paper disproves spock, you win!`, 300, 550);
         npc.lives--;
       }
     } else if (playerChoice === "scissors") {
       if (generatedChoice === "rock") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Rock crushes scissors, you lose!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Rock crushes scissors, you lose!`, 300, 550);
         player.lives--;
       } else if (generatedChoice === "paper") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Scissors cut paper, you win!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Scissors cut paper, you win!`, 300, 550);
         npc.lives--;
       } else if (generatedChoice === "lizard") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Scissors decapitate lizard, you win!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Scissors decapitate lizard, you win!`, 300, 550);
         npc.lives--;
       } else {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Spock smashes scissors, you lose!`, 475, 360);
-        result.innerHTML = `You picked ${playerChoice} and the opponnent picked ${generatedChoice}. Spock smashes scissors, you lose!`;
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Spock smashes scissors, you lose!`, 300, 550);
         player.lives--;
       }
     } else if (playerChoice === "lizard") {
       if (generatedChoice === "rock") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Rock crushes lizard, you lose!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Rock crushes lizard, you lose!`, 300, 550);
         player.lives--;
       } else if (generatedChoice === "paper") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Lizard eats paper, you win!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Lizard eats paper, you win!`, 300, 550);
         npc.lives--;
       } else if (generatedChoice === "scissors") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Scissors decapitate lizard, you lose!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Scissors decapitate lizard, you lose!`, 300, 550);
         player.lives--;
       } else {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Lizard poisons spock, you win!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Lizard poisons spock, you win!`, 300, 550);
         npc.lives--;
       }
     } else if (playerChoice === "spock") {
       if (generatedChoice === "rock") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Spock vaporizes rock, you win!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Spock vaporizes rock, you win!`, 300, 550);
         npc.lives--;
       } else if (generatedChoice === "paper") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Paper disproves spock, you lose!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Paper disproves spock, you lose!`, 300, 550);
         player.lives--;
       } else if (generatedChoice === "scissors") {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Spock smashes scissors, you win!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Spock smashes scissors, you win!`, 300, 550);
         npc.lives--;
       } else {
+        //ctx.fillStyle = "white";
+        //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
+        ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
-        ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
-        ctx.font = "20px sans-serif";
-        ctx.fillStyle = "black";
-        ctx.fillText(`You picked ${playerChoice} and `, 475, 300);
-        ctx.fillText(`the opponnent picked ${generatedChoice}. `, 475, 330);
-        ctx.fillText(`Lizard poisons spock, you lose!`, 475, 360);
+        ctx.fillText(
+          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
+          300,
+          500
+        );
+        ctx.fillText(`Lizard poisons spock, you lose!`, 300, 550);
         player.lives--;
       }
     }
@@ -279,10 +343,10 @@ class Game {
     console.log(npc.lives);
     if (player.lives === 0) {
       console.log("player lost");
-      ctx.fillStyle = "white";
-      ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 125, 400, 250);
+      //ctx.fillStyle = "white";
+      //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 125, 400, 250);
       ctx.font = "20px sans-serif";
-      ctx.fillStyle = "black";
+      ctx.fillStyle = "white";
       ctx.fillText("Bazinga! Better luck next time!", 475, 300);
       //flag = true disables the use of the choice buttons
       this.flag = true;
@@ -294,10 +358,10 @@ class Game {
       }, 5000);
     } else if (npc.lives === 0) {
       console.log("npc lost");
-      ctx.fillStyle = "white";
-      ctx.fillRect(canvas.width / 2 - 190, canvas.height / 2 - 125, 400, 250);
+      //ctx.fillStyle = "white";
+      //ctx.fillRect(canvas.width / 2 - 190, canvas.height / 2 - 125, 400, 250);
       ctx.font = "20px sans-serif";
-      ctx.fillStyle = "black";
+      ctx.fillStyle = "white";
       ctx.fillText("Congratulations! You win!", 500, 300);
       //flag = true disables the use of the choice buttons
       this.flag = true;
