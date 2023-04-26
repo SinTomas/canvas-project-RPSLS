@@ -20,10 +20,8 @@ class Game {
 
     img.src = "./images/tbbt-wp2.jpg";
     this.ctx.drawImage(img, 0, 0, this.width, this.height);
-
-    //ctx.fillStyle = 'white';
-    //ctx.font = '30px Helvetica';
-    //ctx.fillText(Score ${this.score}, 80, 30) lives( after)
+    this.drawPlayerLives();
+    this.drawNpcLives();
   }
 
   gameOn() {
@@ -33,7 +31,6 @@ class Game {
         npc.choice(generatedChoice);
         this.results(player.option, npc.option);
         this.winOrLose();
-        this.drawLives();
       }
     };
     document.getElementsByClassName("paper")[0].onclick = () => {
@@ -42,7 +39,6 @@ class Game {
         npc.choice(generatedChoice);
         this.results(player.option, npc.option);
         this.winOrLose();
-        this.drawLives();
       }
     };
     document.getElementsByClassName("scissors")[0].onclick = () => {
@@ -51,7 +47,6 @@ class Game {
         npc.choice(generatedChoice);
         this.results(player.option, npc.option);
         this.winOrLose();
-        this.drawLives();
       }
     };
     document.getElementsByClassName("lizard")[0].onclick = () => {
@@ -60,7 +55,6 @@ class Game {
         npc.choice(generatedChoice);
         this.results(player.option, npc.option);
         this.winOrLose();
-        this.drawLives();
       }
     };
     this.spock = document.getElementsByClassName("spock")[0].onclick = () => {
@@ -69,29 +63,51 @@ class Game {
         npc.choice(generatedChoice);
         this.results(player.option, npc.option);
         this.winOrLose();
-        this.drawLives();
       }
     };
   }
   //To draw the player lives
-  drawLives() {
+  drawPlayerLives() {
     console.log("life");
     let hearts = new Image();
     hearts.addEventListener("load", () => {
       this.hearts = hearts;
     });
     hearts.src = "./images/heart.png";
-    if (player.lives === 3 || npc.lives === 3) {
-      this.ctx.drawImage(hearts, 200, 200, 40, 40);
-      this.ctx.drawImage(hearts, 180, 200, 40, 40);
-      this.ctx.drawImage(hearts, 160, 200, 40, 40);
+    if (player.lives === 3) {
+      this.ctx.drawImage(hearts, 60, 50, 60, 60);
+      this.ctx.drawImage(hearts, 125, 50, 60, 60);
+      this.ctx.drawImage(hearts, 190, 50, 60, 60);
       console.log("3 life");
-    } else if (player.lives === 2 || npc.lives === 2) {
-      this.ctx.drawImage(hearts, 200, 200, 40, 40);
-      this.ctx.drawImage(hearts, 180, 200, 40, 40);
+    } else if (player.lives === 2) {
+      this.ctx.drawImage(hearts, 60, 50, 60, 60);
+      this.ctx.drawImage(hearts, 125, 50, 60, 60);
       console.log("2 life");
-    } else if (player.lives === 1 || npc.lives === 1) {
-      this.ctx.drawImage(hearts, 200, 200, 40, 40);
+    } else if (player.lives === 1) {
+      this.ctx.drawImage(hearts, 60, 50, 60, 60);
+      console.log("1 life");
+    }
+  }
+
+  //To draw the npc lives
+  drawNpcLives() {
+    console.log("life");
+    let hearts = new Image();
+    hearts.addEventListener("load", () => {
+      this.hearts = hearts;
+    });
+    hearts.src = "./images/heart.png";
+    if (npc.lives === 3) {
+      this.ctx.drawImage(hearts, canvas.width - 120, 50, 60, 60);
+      this.ctx.drawImage(hearts, canvas.width - 185, 50, 60, 60);
+      this.ctx.drawImage(hearts, canvas.width - 250, 50, 60, 60);
+      console.log("3 life");
+    } else if (npc.lives === 2) {
+      this.ctx.drawImage(hearts, canvas.width - 120, 50, 60, 60);
+      this.ctx.drawImage(hearts, canvas.width - 185, 50, 60, 60);
+      console.log("2 life");
+    } else if (npc.lives === 1) {
+      this.ctx.drawImage(hearts, canvas.width - 120, 50, 60, 60);
       console.log("1 life");
     }
   }
@@ -458,13 +474,16 @@ class Game {
       ctx.font = "20px sans-serif";
       ctx.fillStyle = "white";
       ctx.fillText("Bazinga! Better luck next time!", 475, 300);
+
       //flag = true disables the use of the choice buttons
       this.flag = true;
 
       setTimeout(() => {
         this.stop();
-        player.lives = 2;
-      }, 2000);
+        player.lives = 3;
+        npc.lives = 3;
+        this.clear();
+      }, 3000);
     } else if (npc.lives === 0) {
       console.log("npc lost");
       //ctx.fillStyle = "white";
@@ -474,10 +493,13 @@ class Game {
       ctx.fillText("Congratulations! You win!", 500, 300);
       //flag = true disables the use of the choice buttons
       this.flag = true;
+
       setTimeout(() => {
         this.stop();
-        npc.lives = 2;
-      }, 2000);
+        npc.lives = 3;
+        player.lives = 3;
+        this.clear();
+      }, 3000);
     }
   }
 

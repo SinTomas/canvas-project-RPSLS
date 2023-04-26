@@ -30,10 +30,6 @@ window.onload = () => {
     let game = new Game(ctx, canvas.width, canvas.height, flag, player);
     game.clear();
     game.createBackground();
-    //game.start(); 
-    //game.drawLives();
     game.gameOn();
-    
-
   };
 };
