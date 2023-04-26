@@ -23,15 +23,20 @@ let npc = new Component(
   3
 );
 
+this.music = new Audio('./sounds/tbbt-theme.mp3')
+this.music.loop = false
+this.music.volume = 0.1
+
 let flag = null;
 let game = new Game(ctx, canvas.width, canvas.height, flag, player);
 
 document.getElementsByClassName("start-button")[0].onclick = () => {
+  this.music.play();
   //flag = null enables the choice buttons
   game.clear();
   game.createBackground();
-  console.log("die");
-};
+  flag = null
+  };
 
 document.getElementsByClassName("rock")[0].onclick = () => {
   if (game.flag === null) {

@@ -1,4 +1,4 @@
-console.log("JS GAME");
+
 
 let generatedChoice;
 
@@ -11,7 +11,7 @@ class Game {
     this.intervalId = null;
     this.flag = flag;
     let bgImg = new Image();
-    bgImg.src = "./images/tbbt-wp2.jpg";
+    bgImg.src = "./images/bg-rules.png";
     this.img = bgImg;
 
     let heartImg = new Image();
@@ -25,7 +25,92 @@ class Game {
     let loseImg = new Image();
     loseImg.src = "./images/results/lose.png";
     this.loseImg = loseImg;
-  }
+
+    //images results
+    //tie
+    let tie = new Image();
+    tie.src = "./images/results/tie.png";
+    this.tie = tie;
+
+    //player chooses rock
+    let rockPaper = new Image();
+    rockPaper.src = "./images/results/rock-paper-lose.png";
+    this.rockPaper = rockPaper;
+    
+    let rockScissors = new Image();
+    rockScissors.src = "./images/results/rock-scissors-win.png";
+    this.rockScissors = rockScissors;
+    
+    let rockLizard = new Image();
+    rockLizard.src = "./images/results/rock-lizard-win.png";
+    this.rockLizard = rockLizard;
+    
+    let rockSpock = new Image();
+    rockSpock.src = "./images/results/rock-spock-lose.png";
+    this.rockSpock  = rockSpock ;
+
+  //player chooses paper
+  let paperRock = new Image();
+  paperRock.src = "./images/results/paper-rock-win.png";
+  this.paperRock  = paperRock ;
+  let paperScissors = new Image();
+  paperScissors.src = "./images/results/paper-scissors-lose.png";
+  this.paperScissors  = paperScissors ;
+  let paperLizard = new Image();
+  paperLizard.src = "./images/results/paper-lizard-lose.png";
+  this.paperLizard  = paperLizard ;
+  let paperSpock = new Image();
+  paperSpock.src = "./images/results/paper-spock-win.png";
+  this.paperSpock  = paperSpock ;
+
+  //player chooses scissors
+  let scissorsRock = new Image();
+  scissorsRock.src = "./images/results/scissors-rock-lose.png";
+  this.scissorsRock  = scissorsRock ;
+  let scissorsPaper = new Image();
+  scissorsPaper.src = "./images/results/scissors-paper-win.png";
+  this.scissorsPaper  = scissorsPaper ;
+  let scissorsLizard = new Image();
+  scissorsLizard.src = "./images/results/scissors-lizard-win.png";
+  this.scissorsLizard  = scissorsLizard ;
+  let scissorsSpock = new Image();
+  scissorsSpock.src = "./images/results/scissors-spock-lose.png";
+  this.scissorsSpock  = scissorsSpock ;
+
+  //player chooses lizard
+  let lizardRock = new Image();
+  lizardRock.src = "./images/results/lizard-rock-lose.png";
+  this.lizardRock  = lizardRock ;
+  let lizardPaper = new Image();
+  lizardPaper.src = "./images/results/lizard-paper-win.png";
+  this.lizardPaper  = lizardPaper ;
+  let lizardScissors = new Image();
+  lizardScissors.src = "./images/results/lizard-scissors-lose.png";
+  this.lizardScissors  = lizardScissors ;
+  let lizardSpock = new Image();
+  lizardSpock.src = "./images/results/lizard-spock-win.png";
+  this.lizardSpock  = lizardSpock ;
+
+  //player chooses spock
+  let spockRock = new Image();
+  spockRock.src = "./images/results/spock-rock-win.png";
+  this.spockRock  = spockRock ;
+  let spockPaper = new Image();
+  spockPaper.src = "./images/results/spock-paper-lose.png";
+  this.spockPaper  = spockPaper ;
+  let spockScissors = new Image();
+  spockScissors.src = "./images/results/spock-scissors-win.png";
+  this.spockScissors  = spockScissors ;
+  let spockLizard = new Image();
+  spockLizard.src = "./images/results/spock-lizard-lose.png";
+  this.spockLizard  = spockLizard ;
+
+  //adding sounds
+  this.carlos = new Audio('./sounds/bazinga.mp3')
+  this.carlos.volume = 1
+  this.carlos.loop = false
+
+}
 
   createBackground() {
     this.ctx.drawImage(this.img, 0, 0, this.width, this.height);
@@ -73,33 +158,16 @@ class Game {
 
   //Function that explains the win-lose logic of the game and
   //delivers a message for each round
-
   results(playerChoice, generatedChoice) {
     if (playerChoice === generatedChoice) {
-      //ctx.fillStyle = "white";
-      //ctx.fillRect(canvas.width / 2, 400, 1000, 250);
-      ctx.font = "30px sans-serif";
-      ctx.fillStyle = "white";
-      ctx.fillText(
-        `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-        300,
-        500
-      );
-      ctx.fillText(`The result is a tie!`, 300, 550);
+      this.ctx.drawImage(this.tie, 150, 300, 900, 490);
       setTimeout(() => {
         this.clear();
         this.createBackground();
       }, 1500);
     } else if (playerChoice === "rock") {
       if (generatedChoice === "paper") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Paper covers rock, you lose!`, 300, 550);
+        this.ctx.drawImage(this.rockPaper, 150, 300, 900, 490);
         player.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -108,14 +176,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else if (generatedChoice === "scissors") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Rock crushes scissors, you win!`, 300, 550);
+        this.ctx.drawImage(this.rockScissors, 150, 300, 900, 490);
         npc.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -124,14 +185,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else if (generatedChoice === "lizard") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Rock crushes lizard, you win!`, 300, 550);
+        this.ctx.drawImage(this.rockLizard, 150, 300, 900, 490);
         npc.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -140,14 +194,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Spock vaporizes rock, you lose!`, 300, 550);
+        this.ctx.drawImage(this.rockSpock, 150, 300, 900, 490);
         player.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -158,14 +205,7 @@ class Game {
       }
     } else if (playerChoice === "paper") {
       if (generatedChoice === "rock") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Paper covers rock, you win!`, 300, 550);
+        this.ctx.drawImage(this.paperRock, 150, 300, 900, 490);
         npc.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -174,14 +214,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else if (generatedChoice === "scissors") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Scissors cut paper, you lose!`, 300, 550);
+        this.ctx.drawImage(this.paperScissors, 150, 300, 900, 490);
         player.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -190,14 +223,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else if (generatedChoice === "lizard") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Lizard eats paper, you lose!`, 300, 550);
+        this.ctx.drawImage(this.paperLizard, 150, 300, 900, 490);
         player.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -206,14 +232,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Paper disproves spock, you win!`, 300, 550);
+        this.ctx.drawImage(this.paperSpock, 150, 300, 900, 490);
         npc.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -224,14 +243,7 @@ class Game {
       }
     } else if (playerChoice === "scissors") {
       if (generatedChoice === "rock") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Rock crushes scissors, you lose!`, 300, 550);
+        this.ctx.drawImage(this.scissorsRock, 150, 300, 900, 490);
         player.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -240,14 +252,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else if (generatedChoice === "paper") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Scissors cut paper, you win!`, 300, 550);
+        this.ctx.drawImage(this.scissorsPaper, 150, 300, 900, 490);
         npc.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -256,14 +261,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else if (generatedChoice === "lizard") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Scissors decapitate lizard, you win!`, 300, 550);
+        this.ctx.drawImage(this.scissorsLizard, 150, 300, 900, 490);
         npc.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -272,14 +270,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Spock smashes scissors, you lose!`, 300, 550);
+        this.ctx.drawImage(this.scissorsSpock, 150, 300, 900, 490);
         player.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -289,15 +280,8 @@ class Game {
         }, 1500);
       }
     } else if (playerChoice === "lizard") {
-      if (generatedChoice === "rock") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Rock crushes lizard, you lose!`, 300, 550);
+       if (generatedChoice === "rock") {
+        this.ctx.drawImage(this.lizardRock, 150, 300, 900, 490);
         player.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -306,14 +290,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else if (generatedChoice === "paper") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Lizard eats paper, you win!`, 300, 550);
+        this.ctx.drawImage(this.lizardPaper, 150, 300, 900, 490);
         npc.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -322,14 +299,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else if (generatedChoice === "scissors") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Scissors decapitate lizard, you lose!`, 300, 550);
+        this.ctx.drawImage(this.lizardScissors, 150, 300, 900, 490);
         player.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -338,14 +308,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Lizard poisons spock, you win!`, 300, 550);
+        this.ctx.drawImage(this.lizardSpock, 150, 300, 900, 490);
         npc.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -354,16 +317,11 @@ class Game {
           this.createBackground();
         }, 1500);
       }
+
+
     } else if (playerChoice === "spock") {
       if (generatedChoice === "rock") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Spock vaporizes rock, you win!`, 300, 550);
+        this.ctx.drawImage(this.spockRock, 150, 300, 900, 490);
         npc.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -372,14 +330,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else if (generatedChoice === "paper") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Paper disproves spock, you lose!`, 300, 550);
+        this.ctx.drawImage(this.spockPaper, 150, 300, 900, 490);
         player.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -388,14 +339,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else if (generatedChoice === "scissors") {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Spock smashes scissors, you win!`, 300, 550);
+        this.ctx.drawImage(this.spockScissors, 150, 300, 900, 490);
         npc.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -404,14 +348,7 @@ class Game {
           this.createBackground();
         }, 1500);
       } else {
-        ctx.font = "30px sans-serif";
-        ctx.fillStyle = "white";
-        ctx.fillText(
-          `You picked ${playerChoice} and the opponnent picked ${generatedChoice}.`,
-          300,
-          500
-        );
-        ctx.fillText(`Lizard poisons spock, you lose!`, 300, 550);
+        this.ctx.drawImage(this.spockLizard, 150, 300, 900, 490);
         player.lives--;
         this.drawPlayerLives();
         this.drawNpcLives();
@@ -433,15 +370,14 @@ class Game {
         this.loseImg,
         canvas.width / 2 - 175,
         canvas.height / 2 - 200,
-        350,
-        100
+        400,
+        125
       );
-      /*ctx.font = "20px sans-serif";
-      ctx.fillStyle = "white";
-      ctx.fillText("Bazinga! Better luck next time!", 475, 300);*/
+
 
       //flag = true disables the use of the choice buttons
       this.flag = true;
+      this.carlos.play();
 
       setTimeout(() => {
         this.drawPlayerLives();
@@ -450,6 +386,7 @@ class Game {
         player.lives = 3;
         npc.lives = 3;
         this.clear();
+        this.flag = null;
       }, 3000);
     } else if (npc.lives === 0) {
       console.log("npc lost");
@@ -458,20 +395,18 @@ class Game {
         this.winImg,
         canvas.width / 2 - 175,
         canvas.height / 2 - 200,
-        350,
-        100
+        400,
+        125
       );
-      /*ctx.font = "20px sans-serif";
-      ctx.fillStyle = "white";
-      ctx.fillText("Congratulations! You win!", 500, 300);*/
       //flag = true disables the use of the choice buttons
-      this.flag = true;
+      this.flag = null;
 
       setTimeout(() => {
         this.stop();
         npc.lives = 3;
         player.lives = 3;
         this.clear();
+        this.flag = null;
       }, 3000);
     }
   }

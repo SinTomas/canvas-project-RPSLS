@@ -20,10 +20,25 @@ class Component {
     this.scissors.src = "./images/options/scissors.png";
     //lizard
     this.lizard = new Image();
-    this.lizard.src = "./images/options/lizzard.png";
+    this.lizard.src = "./images/options/lizard.png";
     //spock
     this.spock = new Image();
     this.spock.src = "./images/options/spock.png";
+    //rock
+    this.rockNPC = new Image();
+    this.rockNPC.src = "./images/options/rock-npc.png";
+    //paper
+    this.paperNPC = new Image();
+    this.paperNPC.src = "./images/options/paper-npc.png";
+    //scissors
+    this.scissorsNPC = new Image();
+    this.scissorsNPC.src = "./images/options/scissors-npc.png";
+    //lizard
+    this.lizardNPC = new Image();
+    this.lizardNPC.src = "./images/options/lizard-npc.png";
+    //spock
+    this.spockNPC = new Image();
+    this.spockNPC.src = "./images/options/spock-npc.png";
   }
 
   userChoice(choice) {
@@ -34,8 +49,8 @@ class Component {
           this.rock,
           canvas.width / 2 - 110,
           canvas.height / 2 - 50,
-          90,
-          90
+          120,
+          120
         );
         break;
       case "paper":
@@ -43,8 +58,8 @@ class Component {
           this.paper,
           canvas.width / 2 - 110,
           canvas.height / 2 - 50,
-          90,
-          90
+          120,
+          120
         );
         break;
       case "scissors":
@@ -52,8 +67,8 @@ class Component {
           this.scissors,
           canvas.width / 2 - 110,
           canvas.height / 2 - 50,
-          90,
-          90
+          120,
+          120
         );
         break;
       case "lizard":
@@ -61,8 +76,8 @@ class Component {
           this.lizard,
           canvas.width / 2 - 110,
           canvas.height / 2 - 50,
-          90,
-          90
+          120,
+          120
         );
         break;
       case "spock":
@@ -70,8 +85,8 @@ class Component {
           this.spock,
           canvas.width / 2 - 110,
           canvas.height / 2 - 50,
-          90,
-          90
+          120,
+          120
         );
         break;
     }
@@ -101,47 +116,47 @@ class Component {
     switch (generatedChoice) {
       case "rock":
         this.ctx.drawImage(
-          this.rock,
+          this.rockNPC,
           canvas.width / 2 + 50,
           canvas.height / 2 - 50,
-          90,
-          90
+          120,
+          120
         );
         break;
       case "paper":
         this.ctx.drawImage(
-          this.paper,
+          this.paperNPC,
           canvas.width / 2 + 50,
           canvas.height / 2 - 50,
-          90,
-          90
+          120,
+          120
         );
         break;
       case "scissors":
         this.ctx.drawImage(
-          this.scissors,
+          this.scissorsNPC,
           canvas.width / 2 + 50,
           canvas.height / 2 - 50,
-          90,
-          90
+          120,
+          120
         );
         break;
       case "lizard":
         this.ctx.drawImage(
-          this.lizard,
+          this.lizardNPC,
           canvas.width / 2 + 50,
           canvas.height / 2 - 50,
-          90,
-          90
+          120,
+          120
         );
         break;
       case "spock":
         this.ctx.drawImage(
-          this.spock,
+          this.spockNPC,
           canvas.width / 2 + 50,
           canvas.height / 2 - 50,
-          90,
-          90
+          120,
+          120
         );
         break;
     }
