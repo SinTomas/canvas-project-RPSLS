@@ -84,6 +84,10 @@ class Game {
         500
       );
       ctx.fillText(`The result is a tie!`, 300, 550);
+      setTimeout(() => {
+        this.clear();
+        this.createBackground();
+      }, 2000);
     } else if (playerChoice === "rock") {
       if (generatedChoice === "paper") {
         //ctx.fillStyle = "white";
@@ -97,6 +101,10 @@ class Game {
         );
         ctx.fillText(`Paper covers rock, you lose!`, 300, 550);
         player.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else if (generatedChoice === "scissors") {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -108,8 +116,11 @@ class Game {
           500
         );
         ctx.fillText(`Rock crushes scissors, you win!`, 300, 550);
-        player.lives--;
         npc.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else if (generatedChoice === "lizard") {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -122,6 +133,10 @@ class Game {
         );
         ctx.fillText(`Rock crushes lizard, you win!`, 300, 550);
         npc.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -134,6 +149,10 @@ class Game {
         );
         ctx.fillText(`Spock vaporizes rock, you lose!`, 300, 550);
         player.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       }
     } else if (playerChoice === "paper") {
       if (generatedChoice === "rock") {
@@ -148,6 +167,10 @@ class Game {
         );
         ctx.fillText(`Paper covers rock, you win!`, 300, 550);
         npc.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else if (generatedChoice === "scissors") {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -160,6 +183,10 @@ class Game {
         );
         ctx.fillText(`Scissors cut paper, you lose!`, 300, 550);
         player.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else if (generatedChoice === "lizard") {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -172,6 +199,10 @@ class Game {
         );
         ctx.fillText(`Lizard eats paper, you lose!`, 300, 550);
         player.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -184,6 +215,10 @@ class Game {
         );
         ctx.fillText(`Paper disproves spock, you win!`, 300, 550);
         npc.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       }
     } else if (playerChoice === "scissors") {
       if (generatedChoice === "rock") {
@@ -198,6 +233,10 @@ class Game {
         );
         ctx.fillText(`Rock crushes scissors, you lose!`, 300, 550);
         player.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else if (generatedChoice === "paper") {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -210,6 +249,10 @@ class Game {
         );
         ctx.fillText(`Scissors cut paper, you win!`, 300, 550);
         npc.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else if (generatedChoice === "lizard") {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -222,6 +265,10 @@ class Game {
         );
         ctx.fillText(`Scissors decapitate lizard, you win!`, 300, 550);
         npc.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -234,6 +281,10 @@ class Game {
         );
         ctx.fillText(`Spock smashes scissors, you lose!`, 300, 550);
         player.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       }
     } else if (playerChoice === "lizard") {
       if (generatedChoice === "rock") {
@@ -248,6 +299,10 @@ class Game {
         );
         ctx.fillText(`Rock crushes lizard, you lose!`, 300, 550);
         player.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else if (generatedChoice === "paper") {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -260,6 +315,10 @@ class Game {
         );
         ctx.fillText(`Lizard eats paper, you win!`, 300, 550);
         npc.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else if (generatedChoice === "scissors") {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -272,6 +331,10 @@ class Game {
         );
         ctx.fillText(`Scissors decapitate lizard, you lose!`, 300, 550);
         player.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -284,6 +347,10 @@ class Game {
         );
         ctx.fillText(`Lizard poisons spock, you win!`, 300, 550);
         npc.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       }
     } else if (playerChoice === "spock") {
       if (generatedChoice === "rock") {
@@ -298,6 +365,10 @@ class Game {
         );
         ctx.fillText(`Spock vaporizes rock, you win!`, 300, 550);
         npc.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else if (generatedChoice === "paper") {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -310,6 +381,10 @@ class Game {
         );
         ctx.fillText(`Paper disproves spock, you lose!`, 300, 550);
         player.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else if (generatedChoice === "scissors") {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -322,6 +397,10 @@ class Game {
         );
         ctx.fillText(`Spock smashes scissors, you win!`, 300, 550);
         npc.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       } else {
         //ctx.fillStyle = "white";
         //ctx.fillRect(canvas.width / 2 - 175, canvas.height / 2 - 100, 400, 250);
@@ -334,6 +413,10 @@ class Game {
         );
         ctx.fillText(`Lizard poisons spock, you lose!`, 300, 550);
         player.lives--;
+        setTimeout(() => {
+          this.clear();
+          this.createBackground();
+        }, 2000);
       }
     }
   }
@@ -353,9 +436,8 @@ class Game {
 
       setTimeout(() => {
         this.stop();
-        this.clear();
         player.lives = 2;
-      }, 5000);
+      }, 2000);
     } else if (npc.lives === 0) {
       console.log("npc lost");
       //ctx.fillStyle = "white";
@@ -367,9 +449,8 @@ class Game {
       this.flag = true;
       setTimeout(() => {
         this.stop();
-        this.clear();
         npc.lives = 2;
-      }, 3000);
+      }, 2000);
     }
   }
 
