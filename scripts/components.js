@@ -5,40 +5,74 @@ class Component {
     this.w = w;
     this.h = h;
     this.character = character;
-    this.color = "purple";
     this.option = "";
     this.ctx = ctx;
     this.lives = lives;
-  }
-
-  draw() {
-    this.ctx.fillStyle = this.color;
-    this.ctx.fillRect(this.x, this.y, this.w, this.h);
+    //images
+    //rock
+    this.rock = new Image();
+    this.rock.src = "./images/options/rock.png";
+    //paper
+    this.paper = new Image();
+    this.paper.src = "./images/options/paper.png";
+    //scissors
+    this.scissors = new Image();
+    this.scissors.src = "./images/options/scissors.png";
+    //lizard
+    this.lizard = new Image();
+    this.lizard.src = "./images/options/lizzard.png";
+    //spock
+    this.spock = new Image();
+    this.spock.src = "./images/options/spock.png";
   }
 
   userChoice(choice) {
     this.option = choice;
     switch (choice) {
       case "rock":
-        this.color = "red";
-        console.log("rock is red uh-uh");
-        this.draw();
+        this.ctx.drawImage(
+          this.rock,
+          canvas.width / 2 - 70,
+          canvas.height / 2 - 100,
+          520,
+          190
+        );
         break;
       case "paper":
-        this.color = "blue";
-        this.draw();
+        this.ctx.drawImage(
+          this.paper,
+          canvas.width / 2 - 70,
+          canvas.height / 2 - 100,
+          520,
+          190
+        );
         break;
       case "scissors":
-        this.color = "green";
-        this.draw();
+        this.ctx.drawImage(
+          this.scissors,
+          canvas.width / 2 - 70,
+          canvas.height / 2 - 100,
+          520,
+          190
+        );
         break;
       case "lizard":
-        this.color = "yellow";
-        this.draw();
+        this.ctx.drawImage(
+          this.lizard,
+          canvas.width / 2 - 70,
+          canvas.height / 2 - 100,
+          520,
+          190
+        );
         break;
       case "spock":
-        this.color = "orange";
-        this.draw();
+        this.ctx.drawImage(
+          this.spock,
+          canvas.width / 2 - 70,
+          canvas.height / 2 - 100,
+          520,
+          190
+        );
         break;
     }
   }
@@ -66,25 +100,49 @@ class Component {
     this.option = generatedChoice;
     switch (generatedChoice) {
       case "rock":
-        this.color = "red";
-        console.log("rock is red uh-uh");
-        this.draw();
+        this.ctx.drawImage(
+          this.rock,
+          canvas.width / 2 + 70,
+          canvas.height / 2 - 100,
+          520,
+          190
+        );
         break;
       case "paper":
-        this.color = "blue";
-        this.draw();
+        this.ctx.drawImage(
+          this.paper,
+          canvas.width / 2 + 70,
+          canvas.height / 2 - 100,
+          520,
+          190
+        );
         break;
       case "scissors":
-        this.color = "green";
-        this.draw();
+        this.ctx.drawImage(
+          this.scissors,
+          canvas.width / 2 + 70,
+          canvas.height / 2 - 100,
+          520,
+          190
+        );
         break;
       case "lizard":
-        this.color = "yellow";
-        this.draw();
+        this.ctx.drawImage(
+          this.lizard,
+          canvas.width / 2 + 70,
+          canvas.height / 2 - 100,
+          520,
+          190
+        );
         break;
       case "spock":
-        this.color = "orange";
-        this.draw();
+        this.ctx.drawImage(
+          this.spock,
+          canvas.width / 2 + 70,
+          canvas.height / 2 - 100,
+          520,
+          190
+        );
         break;
     }
   }

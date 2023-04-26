@@ -23,13 +23,53 @@ let npc = new Component(
   3
 );
 
-window.onload = () => {
-  document.getElementsByClassName("start-button")[0].onclick = () => {
-    //flag = null enables the choice buttons
-    let flag = null;
-    let game = new Game(ctx, canvas.width, canvas.height, flag, player);
-    game.clear();
-    game.createBackground();
-    game.gameOn();
-  };
+let flag = null;
+let game = new Game(ctx, canvas.width, canvas.height, flag, player);
+
+document.getElementsByClassName("start-button")[0].onclick = () => {
+  //flag = null enables the choice buttons
+  game.clear();
+  game.createBackground();
+  console.log("die");
+};
+
+document.getElementsByClassName("rock")[0].onclick = () => {
+  if (game.flag === null) {
+    player.choice("rock");
+    npc.choice(generatedChoice);
+    game.results(player.option, npc.option);
+    game.winOrLose();
+  }
+};
+document.getElementsByClassName("paper")[0].onclick = () => {
+  if (game.flag === null) {
+    player.choice("paper");
+    npc.choice(generatedChoice);
+    game.results(player.option, npc.option);
+    game.winOrLose();
+  }
+};
+document.getElementsByClassName("scissors")[0].onclick = () => {
+  if (game.flag === null) {
+    player.choice("scissors");
+    npc.choice(generatedChoice);
+    game.results(player.option, npc.option);
+    game.winOrLose();
+  }
+};
+document.getElementsByClassName("lizard")[0].onclick = () => {
+  if (game.flag === null) {
+    player.choice("lizard");
+    npc.choice(generatedChoice);
+    game.results(player.option, npc.option);
+    game.winOrLose();
+  }
+};
+document.getElementsByClassName("spock")[0].onclick = () => {
+  if (game.flag === null) {
+    player.choice("spock");
+    npc.choice(generatedChoice);
+    game.results(player.option, npc.option);
+    game.winOrLose();
+  }
 };
