@@ -17,6 +17,14 @@ class Game {
     let heartImg = new Image();
     heartImg.src = "./images/heart.png";
     this.hearts = heartImg;
+
+    let winImg = new Image();
+    winImg.src = "./images/results/win.png";
+    this.winImg = winImg;
+
+    let loseImg = new Image();
+    loseImg.src = "./images/results/lose.png";
+    this.loseImg = loseImg;
   }
 
   createBackground() {
@@ -81,7 +89,7 @@ class Game {
       setTimeout(() => {
         this.clear();
         this.createBackground();
-      }, 2000);
+      }, 1500);
     } else if (playerChoice === "rock") {
       if (generatedChoice === "paper") {
         ctx.font = "30px sans-serif";
@@ -98,7 +106,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else if (generatedChoice === "scissors") {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -114,7 +122,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else if (generatedChoice === "lizard") {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -130,7 +138,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -146,7 +154,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       }
     } else if (playerChoice === "paper") {
       if (generatedChoice === "rock") {
@@ -164,7 +172,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else if (generatedChoice === "scissors") {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -180,7 +188,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else if (generatedChoice === "lizard") {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -196,7 +204,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -212,7 +220,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       }
     } else if (playerChoice === "scissors") {
       if (generatedChoice === "rock") {
@@ -230,7 +238,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else if (generatedChoice === "paper") {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -246,7 +254,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else if (generatedChoice === "lizard") {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -262,7 +270,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -278,7 +286,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       }
     } else if (playerChoice === "lizard") {
       if (generatedChoice === "rock") {
@@ -296,7 +304,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else if (generatedChoice === "paper") {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -312,7 +320,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else if (generatedChoice === "scissors") {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -328,7 +336,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -344,7 +352,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       }
     } else if (playerChoice === "spock") {
       if (generatedChoice === "rock") {
@@ -362,7 +370,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else if (generatedChoice === "paper") {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -378,7 +386,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else if (generatedChoice === "scissors") {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -394,7 +402,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       } else {
         ctx.font = "30px sans-serif";
         ctx.fillStyle = "white";
@@ -410,7 +418,7 @@ class Game {
         setTimeout(() => {
           this.clear();
           this.createBackground();
-        }, 2000);
+        }, 1500);
       }
     }
   }
@@ -420,9 +428,17 @@ class Game {
     console.log(npc.lives);
     if (player.lives === 0) {
       console.log("player lost");
-      ctx.font = "20px sans-serif";
+      //lose
+      this.ctx.drawImage(
+        this.loseImg,
+        canvas.width / 2 - 175,
+        canvas.height / 2 - 200,
+        350,
+        100
+      );
+      /*ctx.font = "20px sans-serif";
       ctx.fillStyle = "white";
-      ctx.fillText("Bazinga! Better luck next time!", 475, 300);
+      ctx.fillText("Bazinga! Better luck next time!", 475, 300);*/
 
       //flag = true disables the use of the choice buttons
       this.flag = true;
@@ -437,9 +453,17 @@ class Game {
       }, 3000);
     } else if (npc.lives === 0) {
       console.log("npc lost");
-      ctx.font = "20px sans-serif";
+      //win
+      this.ctx.drawImage(
+        this.winImg,
+        canvas.width / 2 - 175,
+        canvas.height / 2 - 200,
+        350,
+        100
+      );
+      /*ctx.font = "20px sans-serif";
       ctx.fillStyle = "white";
-      ctx.fillText("Congratulations! You win!", 500, 300);
+      ctx.fillText("Congratulations! You win!", 500, 300);*/
       //flag = true disables the use of the choice buttons
       this.flag = true;
 

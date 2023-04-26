@@ -32,46 +32,46 @@ class Component {
       case "rock":
         this.ctx.drawImage(
           this.rock,
-          canvas.width / 2 - 70,
-          canvas.height / 2 - 100,
-          520,
-          190
+          canvas.width / 2 - 110,
+          canvas.height / 2 - 50,
+          90,
+          90
         );
         break;
       case "paper":
         this.ctx.drawImage(
           this.paper,
-          canvas.width / 2 - 70,
-          canvas.height / 2 - 100,
-          520,
-          190
+          canvas.width / 2 - 110,
+          canvas.height / 2 - 50,
+          90,
+          90
         );
         break;
       case "scissors":
         this.ctx.drawImage(
           this.scissors,
-          canvas.width / 2 - 70,
-          canvas.height / 2 - 100,
-          520,
-          190
+          canvas.width / 2 - 110,
+          canvas.height / 2 - 50,
+          90,
+          90
         );
         break;
       case "lizard":
         this.ctx.drawImage(
           this.lizard,
-          canvas.width / 2 - 70,
-          canvas.height / 2 - 100,
-          520,
-          190
+          canvas.width / 2 - 110,
+          canvas.height / 2 - 50,
+          90,
+          90
         );
         break;
       case "spock":
         this.ctx.drawImage(
           this.spock,
-          canvas.width / 2 - 70,
-          canvas.height / 2 - 100,
-          520,
-          190
+          canvas.width / 2 - 110,
+          canvas.height / 2 - 50,
+          90,
+          90
         );
         break;
     }
@@ -102,46 +102,46 @@ class Component {
       case "rock":
         this.ctx.drawImage(
           this.rock,
-          canvas.width / 2 + 70,
-          canvas.height / 2 - 100,
-          520,
-          190
+          canvas.width / 2 + 50,
+          canvas.height / 2 - 50,
+          90,
+          90
         );
         break;
       case "paper":
         this.ctx.drawImage(
           this.paper,
-          canvas.width / 2 + 70,
-          canvas.height / 2 - 100,
-          520,
-          190
+          canvas.width / 2 + 50,
+          canvas.height / 2 - 50,
+          90,
+          90
         );
         break;
       case "scissors":
         this.ctx.drawImage(
           this.scissors,
-          canvas.width / 2 + 70,
-          canvas.height / 2 - 100,
-          520,
-          190
+          canvas.width / 2 + 50,
+          canvas.height / 2 - 50,
+          90,
+          90
         );
         break;
       case "lizard":
         this.ctx.drawImage(
           this.lizard,
-          canvas.width / 2 + 70,
-          canvas.height / 2 - 100,
-          520,
-          190
+          canvas.width / 2 + 50,
+          canvas.height / 2 - 50,
+          90,
+          90
         );
         break;
       case "spock":
         this.ctx.drawImage(
           this.spock,
-          canvas.width / 2 + 70,
-          canvas.height / 2 - 100,
-          520,
-          190
+          canvas.width / 2 + 50,
+          canvas.height / 2 - 50,
+          90,
+          90
         );
         break;
     }
