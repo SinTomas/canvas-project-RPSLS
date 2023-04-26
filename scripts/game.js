@@ -33,6 +33,7 @@ class Game {
         npc.choice(generatedChoice);
         this.results(player.option, npc.option);
         this.winOrLose();
+        this.drawLives();
       }
     };
     document.getElementsByClassName("paper")[0].onclick = () => {
@@ -41,6 +42,7 @@ class Game {
         npc.choice(generatedChoice);
         this.results(player.option, npc.option);
         this.winOrLose();
+        this.drawLives();
       }
     };
     document.getElementsByClassName("scissors")[0].onclick = () => {
@@ -49,6 +51,7 @@ class Game {
         npc.choice(generatedChoice);
         this.results(player.option, npc.option);
         this.winOrLose();
+        this.drawLives();
       }
     };
     document.getElementsByClassName("lizard")[0].onclick = () => {
@@ -57,6 +60,7 @@ class Game {
         npc.choice(generatedChoice);
         this.results(player.option, npc.option);
         this.winOrLose();
+        this.drawLives();
       }
     };
     this.spock = document.getElementsByClassName("spock")[0].onclick = () => {
@@ -65,8 +69,31 @@ class Game {
         npc.choice(generatedChoice);
         this.results(player.option, npc.option);
         this.winOrLose();
+        this.drawLives();
       }
     };
+  }
+  //To draw the player lives
+  drawLives() {
+    console.log("life");
+    let hearts = new Image();
+    hearts.addEventListener("load", () => {
+      this.hearts = hearts;
+    });
+    hearts.src = "./images/heart.png";
+    if (player.lives === 3 || npc.lives === 3) {
+      this.ctx.drawImage(hearts, 200, 200, 40, 40);
+      this.ctx.drawImage(hearts, 180, 200, 40, 40);
+      this.ctx.drawImage(hearts, 160, 200, 40, 40);
+      console.log("3 life");
+    } else if (player.lives === 2 || npc.lives === 2) {
+      this.ctx.drawImage(hearts, 200, 200, 40, 40);
+      this.ctx.drawImage(hearts, 180, 200, 40, 40);
+      console.log("2 life");
+    } else if (player.lives === 1 || npc.lives === 1) {
+      this.ctx.drawImage(hearts, 200, 200, 40, 40);
+      console.log("1 life");
+    }
   }
 
   //Function that explains the win-lose logic of the game and

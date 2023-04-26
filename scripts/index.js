@@ -11,7 +11,7 @@ let player = new Component(
   50,
   "player",
   ctx,
-  2
+  3
 );
 let npc = new Component(
   canvas.width / 2 + 50,
@@ -20,7 +20,7 @@ let npc = new Component(
   50,
   "npc",
   ctx,
-  2
+  3
 );
 
 window.onload = () => {
@@ -30,7 +30,10 @@ window.onload = () => {
     let game = new Game(ctx, canvas.width, canvas.height, flag, player);
     game.clear();
     game.createBackground();
-    //game.start();
+    //game.start(); 
+    //game.drawLives();
     game.gameOn();
+    
+
   };
 };
