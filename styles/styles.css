@@ -9,11 +9,12 @@
 }
 
 body {
-  background-image: url("../images/background-arcade1.png");
+  background-image: url("../images/rpsls-bg.png");
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-size: cover;
 }
 
 canvas {
