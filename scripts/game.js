@@ -1,5 +1,3 @@
-
-
 let generatedChoice;
 
 class Game {
@@ -109,7 +107,6 @@ class Game {
   this.carlos = new Audio('./sounds/bazinga.mp3')
   this.carlos.volume = 1
   this.carlos.loop = false
-
 }
 
   createBackground() {
@@ -374,7 +371,6 @@ class Game {
         125
       );
 
-
       //flag = true disables the use of the choice buttons
       this.flag = true;
       this.carlos.play();
@@ -386,7 +382,7 @@ class Game {
         player.lives = 3;
         npc.lives = 3;
         this.clear();
-        this.flag = null;
+        this.flag = true;
       }, 3000);
     } else if (npc.lives === 0) {
       console.log("npc lost");
@@ -406,7 +402,7 @@ class Game {
         npc.lives = 3;
         player.lives = 3;
         this.clear();
-        this.flag = null;
+        this.flag = true;
       }, 3000);
     }
   }

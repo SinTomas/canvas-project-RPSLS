@@ -24,7 +24,7 @@ let npc = new Component(
 );
 
 this.music = new Audio('./sounds/tbbt-theme.mp3')
-this.music.loop = false
+this.music.loop = true
 this.music.volume = 0.1
 
 let flag = null;
@@ -35,7 +35,7 @@ document.getElementsByClassName("start-button")[0].onclick = () => {
   //flag = null enables the choice buttons
   game.clear();
   game.createBackground();
-  flag = null
+  game.flag = null
   };
 
 document.getElementsByClassName("rock")[0].onclick = () => {
