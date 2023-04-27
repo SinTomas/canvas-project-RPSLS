@@ -11,34 +11,34 @@ class Component {
     //images
     //rock
     this.rock = new Image();
-    this.rock.src = "./assets/images/options/rock.png";
+    this.rock.src = "docs/assets/images/options/rock.png";
     //paper
     this.paper = new Image();
-    this.paper.src = "./assets/images/options/paper.png";
+    this.paper.src = "docs/assets/images/options/paper.png";
     //scissors
     this.scissors = new Image();
-    this.scissors.src = "./assets/images/options/scissors.png";
+    this.scissors.src = "docs/assets/images/options/scissors.png";
     //lizard
     this.lizard = new Image();
-    this.lizard.src = "./assets/images/options/lizard.png";
+    this.lizard.src = "docs/assets/images/options/lizard.png";
     //spock
     this.spock = new Image();
-    this.spock.src = "./assets/images/options/spock.png";
+    this.spock.src = "docs/assets/images/options/spock.png";
     //rock
     this.rockNPC = new Image();
-    this.rockNPC.src = "./assets/assets/images/options/rock-npc.png";
+    this.rockNPC.src = "docs/assets/docs/assets/images/options/rock-npc.png";
     //paper
     this.paperNPC = new Image();
-    this.paperNPC.src = "./assets/images/options/paper-npc.png";
+    this.paperNPC.src = "docs/assets/images/options/paper-npc.png";
     //scissors
     this.scissorsNPC = new Image();
-    this.scissorsNPC.src = "./assets/images/options/scissors-npc.png";
+    this.scissorsNPC.src = "docs/assets/images/options/scissors-npc.png";
     //lizard
     this.lizardNPC = new Image();
-    this.lizardNPC.src = "./assets/images/options/lizard-npc.png";
+    this.lizardNPC.src = "docs/assets/images/options/lizard-npc.png";
     //spock
     this.spockNPC = new Image();
-    this.spockNPC.src = "./assets/images/options/spock-npc.png";
+    this.spockNPC.src = "docs/assets/images/options/spock-npc.png";
   }
 
   userChoice(choice) {
