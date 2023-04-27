@@ -27,8 +27,12 @@ this.music = new Audio('docs/assets/sounds/tbbt-theme.mp3')
 this.music.loop = true
 this.music.volume = 0.1
 
-let flag = true;
+let flag = null;
 let game = new Game(ctx, canvas.width, canvas.height, flag, player);
+
+window.onload = () => {
+  game.flag=true;
+}
 
 document.getElementsByClassName("start-button")[0].onclick = () => {
   this.music.play();
