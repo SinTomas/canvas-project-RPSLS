@@ -26,7 +26,7 @@ class Component {
     this.spock.src = "docs/assets/images/options/spock.png";
     //rock
     this.rockNPC = new Image();
-    this.rockNPC.src = "docs/assets/docs/assets/images/options/rock-npc.png";
+    this.rockNPC.src = "docs/assets/images/options/rock-npc.png";
     //paper
     this.paperNPC = new Image();
     this.paperNPC.src = "docs/assets/images/options/paper-npc.png";
