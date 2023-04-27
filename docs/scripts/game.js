@@ -9,102 +9,102 @@ class Game {
     this.intervalId = null;
     this.flag = flag;
     let bgImg = new Image();
-    bgImg.src = "./images/bg-rules.png";
+    bgImg.src = "./assets/images/bg-rules.png";
     this.img = bgImg;
 
     let heartImg = new Image();
-    heartImg.src = "./images/heart.png";
+    heartImg.src = "./assets/images/heart.png";
     this.hearts = heartImg;
 
     let winImg = new Image();
-    winImg.src = "./images/results/win.png";
+    winImg.src = "./assets/images/results/win.png";
     this.winImg = winImg;
 
     let loseImg = new Image();
-    loseImg.src = "./images/results/lose.png";
+    loseImg.src = "./assets/images/results/lose.png";
     this.loseImg = loseImg;
 
     //images results
     //tie
     let tie = new Image();
-    tie.src = "./images/results/tie.png";
+    tie.src = "./assets/images/results/tie.png";
     this.tie = tie;
 
     //player chooses rock
     let rockPaper = new Image();
-    rockPaper.src = "./images/results/rock-paper-lose.png";
+    rockPaper.src = "./assets/images/results/rock-paper-lose.png";
     this.rockPaper = rockPaper;
     
     let rockScissors = new Image();
-    rockScissors.src = "./images/results/rock-scissors-win.png";
+    rockScissors.src = "./assets/images/results/rock-scissors-win.png";
     this.rockScissors = rockScissors;
     
     let rockLizard = new Image();
-    rockLizard.src = "./images/results/rock-lizard-win.png";
+    rockLizard.src = "./assets/images/results/rock-lizard-win.png";
     this.rockLizard = rockLizard;
     
     let rockSpock = new Image();
-    rockSpock.src = "./images/results/rock-spock-lose.png";
+    rockSpock.src = "./assets/images/results/rock-spock-lose.png";
     this.rockSpock  = rockSpock ;
 
   //player chooses paper
   let paperRock = new Image();
-  paperRock.src = "./images/results/paper-rock-win.png";
+  paperRock.src = "./assets/images/results/paper-rock-win.png";
   this.paperRock  = paperRock ;
   let paperScissors = new Image();
-  paperScissors.src = "./images/results/paper-scissors-lose.png";
+  paperScissors.src = "./assets/images/results/paper-scissors-lose.png";
   this.paperScissors  = paperScissors ;
   let paperLizard = new Image();
-  paperLizard.src = "./images/results/paper-lizard-lose.png";
+  paperLizard.src = "./assets/images/results/paper-lizard-lose.png";
   this.paperLizard  = paperLizard ;
   let paperSpock = new Image();
-  paperSpock.src = "./images/results/paper-spock-win.png";
+  paperSpock.src = "./assets/images/results/paper-spock-win.png";
   this.paperSpock  = paperSpock ;
 
   //player chooses scissors
   let scissorsRock = new Image();
-  scissorsRock.src = "./images/results/scissors-rock-lose.png";
+  scissorsRock.src = "./assets/images/results/scissors-rock-lose.png";
   this.scissorsRock  = scissorsRock ;
   let scissorsPaper = new Image();
-  scissorsPaper.src = "./images/results/scissors-paper-win.png";
+  scissorsPaper.src = "./assets/images/results/scissors-paper-win.png";
   this.scissorsPaper  = scissorsPaper ;
   let scissorsLizard = new Image();
-  scissorsLizard.src = "./images/results/scissors-lizard-win.png";
+  scissorsLizard.src = "./assets/images/results/scissors-lizard-win.png";
   this.scissorsLizard  = scissorsLizard ;
   let scissorsSpock = new Image();
-  scissorsSpock.src = "./images/results/scissors-spock-lose.png";
+  scissorsSpock.src = "./assets/images/results/scissors-spock-lose.png";
   this.scissorsSpock  = scissorsSpock ;
 
   //player chooses lizard
   let lizardRock = new Image();
-  lizardRock.src = "./images/results/lizard-rock-lose.png";
+  lizardRock.src = "./assets/images/results/lizard-rock-lose.png";
   this.lizardRock  = lizardRock ;
   let lizardPaper = new Image();
-  lizardPaper.src = "./images/results/lizard-paper-win.png";
+  lizardPaper.src = "./assets/images/results/lizard-paper-win.png";
   this.lizardPaper  = lizardPaper ;
   let lizardScissors = new Image();
-  lizardScissors.src = "./images/results/lizard-scissors-lose.png";
+  lizardScissors.src = "./assets/images/results/lizard-scissors-lose.png";
   this.lizardScissors  = lizardScissors ;
   let lizardSpock = new Image();
-  lizardSpock.src = "./images/results/lizard-spock-win.png";
+  lizardSpock.src = "./assets/images/results/lizard-spock-win.png";
   this.lizardSpock  = lizardSpock ;
 
   //player chooses spock
   let spockRock = new Image();
-  spockRock.src = "./images/results/spock-rock-win.png";
+  spockRock.src = "./assets/images/results/spock-rock-win.png";
   this.spockRock  = spockRock ;
   let spockPaper = new Image();
-  spockPaper.src = "./images/results/spock-paper-lose.png";
+  spockPaper.src = "./assets/images/results/spock-paper-lose.png";
   this.spockPaper  = spockPaper ;
   let spockScissors = new Image();
-  spockScissors.src = "./images/results/spock-scissors-win.png";
+  spockScissors.src = "./assets/images/results/spock-scissors-win.png";
   this.spockScissors  = spockScissors ;
   let spockLizard = new Image();
-  spockLizard.src = "./images/results/spock-lizard-lose.png";
+  spockLizard.src = "./assets/images/results/spock-lizard-lose.png";
   this.spockLizard  = spockLizard ;
 
   //adding sounds
-  this.carlos = new Audio('./sounds/bazinga.mp3')
+  this.carlos = new Audio('./assets/sounds/bazinga.mp3')
   this.carlos.volume = 1
   this.carlos.loop = false
 }

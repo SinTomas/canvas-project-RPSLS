@@ -23,7 +23,7 @@ let npc = new Component(
   3
 );
 
-this.music = new Audio('./sounds/tbbt-theme.mp3')
+this.music = new Audio('./assets/sounds/tbbt-theme.mp3')
 this.music.loop = true
 this.music.volume = 0.1
 

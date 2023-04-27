@@ -1,15 +1,10 @@
-@font-face {
-  font-family: sans-serif;
-  src: url(../fonts/retroGame.TTF);
-}
-
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-image: url("../images/rpsls-bg.png");
+  background-image: url("../assets/images/rpsls-bg.png");
   display: flex;
   justify-content: center;
   align-items: center;
